@@ -1,0 +1,55 @@
+<!-- medication-request.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Medication</title>
+  <style>
+    /* Basic styling for the form */
+    #medication-form {
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+    #medication-form label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    #medication-form input, #medication-form textarea, #medication-form button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<section id="medication-form">
+  <h2>Request Medication</h2>
+  <form action="https://api.web3forms.com/submit" method="POST" id="medForm">
+    <!-- Web3Forms Access Key -->
+    <input type="hidden" name="access_key" value="224f495d-d5a9-4d06-82dc-80c651a6895e">
+    
+    <!-- User Information -->
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <!-- Medication Request -->
+    <label for="medication">Medication Needed:</label>
+    <textarea id="medication" name="medication" required placeholder="Describe the medication you need"></textarea>
+    
+    <button type="submit">Submit Request</button>
+  </form>
+</section>
+
+</body>
+</html>
